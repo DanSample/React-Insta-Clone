@@ -1,9 +1,10 @@
 .search-bar-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   height: 5rem;
   border-bottom: 1px solid lightgrey;
+  margin-bottom: 2.5rem;
 }
 
 .search-bar-wrapper .image-wrapper {
