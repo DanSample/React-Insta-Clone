@@ -1,0 +1,28 @@
+.search-bar-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 5rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.search-bar-wrapper .image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: flex-start;
+  height: 3rem;
+  width: 6rem;
+  border-right: 1px solid grey;
+}
+
+.search-bar-wrapper .input-bar input {
+  text-align: center;
+}
+
+.search-bar-wrapper .social-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 20rem;
+}

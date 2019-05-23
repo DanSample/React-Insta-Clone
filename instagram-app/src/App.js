@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import dummyData from './dummy-data';
 import PostContainer from './Components/PostContainer/PostContainer';
+import SearchBar from './Components/SearchBar/SearchBar';
 import './App.css';
 
 class App extends React.Component {
@@ -15,10 +16,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">{/* */}</header>
-        <div>
-          <PostContainer posts={this.state.posts} />
-        </div>
+        <SearchBar />
+        <PostContainer posts={this.state.posts} />
       </div>
     );
   }

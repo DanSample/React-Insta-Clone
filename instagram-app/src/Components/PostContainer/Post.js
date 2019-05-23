@@ -10,11 +10,7 @@ const Post = props => {
         username={props.post.username}
       />
       <div className="post-image-wrapper">
-        <img
-          className="post-image"
-          alt="post image"
-          src={props.post.imageUrl}
-        />
+        <img className="post-image" alt="post" src={props.post.imageUrl} />
       </div>
       <CommentSection comments={props.post.comments} />
     </div>
