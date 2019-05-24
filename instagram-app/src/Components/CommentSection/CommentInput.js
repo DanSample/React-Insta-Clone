@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CommentInput = props => {
+const CommentInput = () => {
   return (
     <form className="comment-input-wrapper">
       <input
