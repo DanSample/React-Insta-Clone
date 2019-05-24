@@ -15,13 +15,29 @@
   height: 3rem;
   width: 6rem;
   border-right: 1px solid grey;
+  margin-top: 0.35rem;
 }
 
-.search-bar-wrapper .input-bar input {
+.search-bar-wrapper .right-bar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: auto;
+  width: 100%;
+}
+
+.search-bar-wrapper .right-bar-wrapper .logo {
+  height: auto;
+  width: 10rem;
+  margin-left: 0.75rem;
+}
+
+.search-bar-wrapper .right-bar-wrapper .input-bar input {
   text-align: center;
+  margin-top: 1rem;
 }
 
-.search-bar-wrapper .social-wrapper {
+.search-bar-wrapper .right-bar-wrapper .social-wrapper {
   display: flex;
   justify-content: space-between;
   height: 100%;

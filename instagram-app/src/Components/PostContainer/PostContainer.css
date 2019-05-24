@@ -5,6 +5,9 @@
 }
 
 .post-container-wrapper .post-wrapper {
+  max-width: 64.1rem;
+  width: 100%;
+  background-color: #fbfbfb;
   border: 1px solid lightgray;
   margin-top: 2.5rem;
 }

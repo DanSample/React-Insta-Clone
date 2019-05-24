@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import dummyData from './dummy-data';
 import PostContainer from './Components/PostContainer/PostContainer';
 import SearchBar from './Components/SearchBar/SearchBar';
