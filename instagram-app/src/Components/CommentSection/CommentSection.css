@@ -51,5 +51,10 @@
 }
 
 .comment-text-wrapper .comment-input-wrapper .comment-input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  background-color: #fbfbfb;
   border: none;
+  outline: none;
 }
