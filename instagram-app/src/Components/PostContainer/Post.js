@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import PostHeader from '../PostContainer/PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 
@@ -19,13 +19,18 @@ const Post = props => {
 };
 
 Post.propTypes = {
-  post: PropTypes.shape({ 
-    thumbnailUrl: PropTypes.string, 
-    username: PropTypes.string, 
-    comments: PropTypes.arrayOf(PropTypes.shape({ 
-      text: PropTypes.string, 
-      username: PropTypes.string })), 
-      likes: PropTypes.number })
-}
+  post: PropTypes.shape({
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.string,
+    imageUrl: PropTypes.string,
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string,
+        username: PropTypes.string
+      })
+    ),
+    likes: PropTypes.number
+  })
+};
 
 export default Post;
