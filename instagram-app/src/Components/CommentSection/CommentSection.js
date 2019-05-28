@@ -14,13 +14,13 @@ class CommentSection extends React.Component {
   }
 
   componentDidMount() {
-    const id = this.props.postId;
-    if (localStorage.getItem(id)) {
+    const id = this.props.postId; //returns the value of postId (imageUrl) and sets it to id.
+    if (localStorage.getItem(id)) { //if in local storage it finds id then...
       this.setState({
-        comments: JSON.parse(localStorage.getItem(this.props.postId))
+        comments: JSON.parse(localStorage.getItem(this.props.postId)) //... take all postId in local storage and set it to state.
       });
     } else {
-      this.saveComment();
+      this.saveComment(); // else instantiate the saveComment function.
     }
   }
 
@@ -47,7 +47,7 @@ class CommentSection extends React.Component {
   saveComment = () => {
     localStorage.setItem(
       this.props.postId,
-      JSON.stringify(this.state.comments)
+      JSON.stringify(this.state.comments) //set new items to state with a key value pair.
     );
   };
 
