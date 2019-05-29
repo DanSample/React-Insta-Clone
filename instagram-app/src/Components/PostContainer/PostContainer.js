@@ -1,6 +1,6 @@
 import React from 'react';
 import Post from './Post';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 const PostContainer = props => {
@@ -15,8 +15,8 @@ const PostContainer = props => {
 
 PostContainer.propTypes = {
   posts: PropTypes.arrayOf(
-    PropTypes.shape({ imageUrl: PropTypes.string, posts: PropTypes.number })
+    PropTypes.shape({ imageUrl: PropTypes.string, comments: PropTypes.number })
   )
-}
+};
 
 export default PostContainer;

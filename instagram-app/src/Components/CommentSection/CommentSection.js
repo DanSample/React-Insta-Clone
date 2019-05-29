@@ -36,13 +36,12 @@ class CommentSection extends React.Component {
 
   handleCommentSubmit = e => {
     e.preventDefault(); // Prevents the page from fully re rendering and only the component
-    const newComment = { text: this.state.comment, username: 'DanTheDev3' }; //instantiate a new object with text set to
-    console.log(newComment);
+    const newComment = { text: this.state.comment, username: 'DanTheDev3' }; //instantiate a new object with text: set to this.state.comment which is the 'value' the input field. The username is just hardcoded currently.
     const comments = this.state.comments.slice(); // copies comments from state and instantiates a new variable.
     comments.push(newComment); //pushes the copied comments to the newComment variable.
-    this.setState({ comments, comment: '' }); //sets state
+    this.setState({ comments, comment: '' }); //sets state with new comment(s) and resets the input field
     setTimeout(() => {
-      this.saveComment(); // Fires the setTimeout function after 0.5 sec.
+      this.saveComment(); // Fires the saveComment() function after 0.5 sec.
     }, 500);
   };
 
@@ -56,18 +55,13 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="comment-text-wrapper">
-        <div className="comment-icon-wrapper">
-          <div className="icon far fa-heart fa-2x" />
-          <div className="icon far fa-comment fa-2x" />
-        </div>
-        <div className="likes">{this.state.likes} Likes</div>
         {this.state.comments.map((c, i) => (
-          <Comment key={i} comment={c} />
+          <Comment key={i} comment={c} /> //maps over the comment on state and creates a new 'Comment' with a username and text.
         ))}
         <CommentInput
-          comment={this.state.comment}
-          submitComment={this.handleCommentSubmit}
-          changeComment={this.commentHandler}
+          comment={this.state.comment} //passes this.state.comment to be used in the input field.
+          submitComment={this.handleCommentSubmit} //passes handleCommentSubmit to be used onSubmit.
+          changeComment={this.commentHandler} //passes handleCommentSubmit to be used onChange.
         />
       </div>
     );

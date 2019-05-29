@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Comment = props => {
   return (
@@ -11,9 +11,9 @@ const Comment = props => {
 };
 
 Comment.propTypes = {
-  comment: PropTypes.shape({ 
-    text: PropTypes.string, 
-    username: PropTypes.string 
+  comment: PropTypes.shape({
+    text: PropTypes.string,
+    username: PropTypes.string
   })
-}
+};
 export default Comment;
