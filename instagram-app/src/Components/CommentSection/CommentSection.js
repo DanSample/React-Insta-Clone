@@ -15,7 +15,8 @@ class CommentSection extends React.Component {
 
   componentDidMount() {
     const id = this.props.postId; //returns the value of postId (imageUrl) and sets it to id.
-    if (localStorage.getItem(id)) { //if in local storage it finds id then...
+    if (localStorage.getItem(id)) {
+      //if in local storage it finds id then...
       this.setState({
         comments: JSON.parse(localStorage.getItem(this.props.postId)) //... take all postId in local storage and set it to state.
       });
@@ -30,24 +31,25 @@ class CommentSection extends React.Component {
 
   commentHandler = e => {
     e.preventDefault();
-    this.setState({ comment: e.target.value });
+    this.setState({ comment: e.target.value }); // Sets the user input to state.
   };
 
   handleCommentSubmit = e => {
-    e.preventDefault();
-    const newComment = { text: this.state.comment, username: 'DanTheDev3' };
-    const comments = this.state.comments.slice();
-    comments.push(newComment);
-    this.setState({ comments, comment: '' });
+    e.preventDefault(); // Prevents the page from fully re rendering and only the component
+    const newComment = { text: this.state.comment, username: 'DanTheDev3' }; //instantiate a new object with text set to
+    console.log(newComment);
+    const comments = this.state.comments.slice(); // copies comments from state and instantiates a new variable.
+    comments.push(newComment); //pushes the copied comments to the newComment variable.
+    this.setState({ comments, comment: '' }); //sets state
     setTimeout(() => {
-      this.saveComment();
+      this.saveComment(); // Fires the setTimeout function after 0.5 sec.
     }, 500);
   };
 
   saveComment = () => {
     localStorage.setItem(
       this.props.postId,
-      JSON.stringify(this.state.comments) //set new items to state with a key value pair.
+      JSON.stringify(this.state.comments) //set new items to state with a key value pair. The key is postId and
     );
   };
 
