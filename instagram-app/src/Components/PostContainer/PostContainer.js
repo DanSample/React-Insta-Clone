@@ -15,7 +15,15 @@ const PostContainer = props => {
 
 PostContainer.propTypes = {
   posts: PropTypes.arrayOf(
-    PropTypes.shape({ imageUrl: PropTypes.string, comments: PropTypes.number })
+    PropTypes.shape({
+      imageUrl: PropTypes.string,
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({
+          username: PropTypes.string,
+          test: PropTypes.string
+        })
+      )
+    })
   )
 };
 
