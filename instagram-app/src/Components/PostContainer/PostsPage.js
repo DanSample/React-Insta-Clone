@@ -17,6 +17,11 @@ class PostsPage extends React.Component {
     this.setState({ posts: dummyData, filteredPosts: dummyData });
   }
 
+  logOut = () => {
+    localStorage.removeItem('user');
+    window.location.reload();
+  };
+
   handleSearchChange = e => {
     e.preventDefault();
     const searchTerm = e.target.value;
@@ -35,6 +40,7 @@ class PostsPage extends React.Component {
         <SearchBar
           search={this.state.search}
           filterPosts={this.handleSearchChange}
+          logOut={this.logOut}
         />
         <PostContainer
           posts={

@@ -32,6 +32,9 @@ const SearchBar = props => {
             <i className="fa fa-user-circle fa-2x" />
           </div>
         </div>
+        <button className="log-out" onClick={props.logOut}>
+          Log Out
+        </button>
       </div>
     </div>
   );
