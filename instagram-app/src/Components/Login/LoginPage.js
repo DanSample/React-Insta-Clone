@@ -28,16 +28,20 @@ class Login extends React.Component {
         <input
           type="text"
           placeholder="User Name"
+          name="username"
           value={this.state.username} //value is set to state prop username
           onChange={this.handleInputChange}
         />
         <input
           type="text"
           placeholder="Password"
+          name="password"
           value={this.state.password} //value is set to state prop password
           onChange={this.handleInputChange}
         />
-        <button className="btn">Log In</button>
+        <button className="btn" onClick={this.handleLoginSubmit}>
+          Log In
+        </button>
       </form>
     );
   }
