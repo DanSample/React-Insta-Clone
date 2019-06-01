@@ -1,4 +1,12 @@
 import React from 'react';
+import {
+  Button,
+  LoginForm,
+  LoginHeader,
+  LoginPhrase,
+  LoginInputContainer,
+  LoginInputField
+} from '../Styles/LoginStylePackage';
 import './LoginPage.css';
 
 class Login extends React.Component {
@@ -22,27 +30,28 @@ class Login extends React.Component {
 
   render() {
     return (
-      <form className="login-form">
-        <h2>Welcome To Insta Clone!</h2>
-        <div>Please Login</div>
-        <input
-          type="text"
-          placeholder="User Name"
-          name="username"
-          value={this.state.username} //value is set to state prop username
-          onChange={this.handleInputChange}
-        />
-        <input
-          type="text"
-          placeholder="Password"
-          name="password"
-          value={this.state.password} //value is set to state prop password
-          onChange={this.handleInputChange}
-        />
-        <button className="btn" onClick={this.handleLoginSubmit}>
-          Log In
-        </button>
-      </form>
+      <LoginForm>
+        <LoginHeader>Welcome To Insta Clone!</LoginHeader>
+        <LoginPhrase>Please Login</LoginPhrase>
+        <LoginInputContainer>
+          <LoginInputField
+            primary
+            type="text"
+            placeholder="Username"
+            name="username"
+            value={this.state.username} //value is set to state prop username
+            onChange={this.handleInputChange}
+          />
+          <LoginInputField
+            type="text"
+            placeholder="Password"
+            name="password"
+            value={this.state.password} //value is set to state prop password
+            onChange={this.handleInputChange}
+          />
+        </LoginInputContainer>
+        <Button onClick={this.handleLoginSubmit}>Log In</Button>
+      </LoginForm>
     );
   }
 }
