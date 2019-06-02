@@ -1,17 +1,22 @@
 import React from 'react';
+import {
+  PostHeaderWrapper,
+  PostThumbWrapper,
+  PostThumbImg
+} from '../Styles/PostContainerStylePkg';
 
 const PostHeader = props => {
   return (
-    <div className="post-header">
-      <div className="post-thumb-wrapper">
-        <img
+    <PostHeaderWrapper>
+      <PostThumbWrapper>
+        <PostThumbImg
           className="post-thumb"
           alt="post thumbnail"
           src={props.thumbnailUrl}
         />
-      </div>
+      </PostThumbWrapper>
       <div>{props.username}</div>
-    </div>
+    </PostHeaderWrapper>
   );
 };
 export default PostHeader;

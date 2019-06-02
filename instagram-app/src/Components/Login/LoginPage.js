@@ -6,7 +6,7 @@ import {
   LoginPhrase,
   LoginInputContainer,
   LoginInputField
-} from '../Styles/LoginStylePackage';
+} from '../Styles/LoginStylePkg';
 import './LoginPage.css';
 
 class Login extends React.Component {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import PostHeader from '../PostContainer/PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import Likes from './Likes';
+import { PostWrapper } from '../Styles/PostContainerStylePkg';
 
 class Post extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Post extends React.Component {
 
   render() {
     return (
-      <div className="post-wrapper">
+      <PostWrapper>
         <PostHeader
           thumbnailUrl={this.props.post.thumbnailUrl}
           username={this.props.post.username}
@@ -37,7 +38,7 @@ class Post extends React.Component {
           comments={this.props.post.comments}
           likes={this.props.post.likes}
         />
-      </div>
+      </PostWrapper>
     );
   }
 }
