@@ -3,6 +3,7 @@ import {
   CommentInputWrapper,
   CommentInputField
 } from '../Styles/CommentSectionStylePkg';
+
 const CommentInput = props => {
   return (
     <CommentInputWrapper onSubmit={props.submitComment}>

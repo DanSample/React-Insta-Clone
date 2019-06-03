@@ -2,7 +2,11 @@ import styled, { css } from 'styled-components';
 import Button from './Reusables/Buttons';
 
 const LoginForm = styled.form`
-  margin-top: 10rem;
+  margin: 5.5rem auto;
+  padding-top: 5rem; 
+  background-color: rgba(53, 70, 73, 0.5);
+  height: 50rem;
+  width: 80%;
 `;
 
 const LoginHeader = styled.h2`

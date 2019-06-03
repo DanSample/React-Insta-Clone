@@ -64,7 +64,7 @@ const CommentInputField = styled.input`
   height: 100%;
   width: 100%;
   font-size: 1.6rem;
-  background-color: #fbfbfb;
+  background-color: #E0E7E9;
   border: none;
   outline: none;
 `;

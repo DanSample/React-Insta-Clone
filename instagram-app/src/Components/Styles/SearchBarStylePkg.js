@@ -1,31 +1,32 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Button from './Reusables/Buttons';
 
 const SearchBarWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  align-self: center;
+  position: fixed;
+  width: 80%;
   height: 8rem;
-  background-color: #6c7a89;
-  border-bottom: 1px solid lightgrey;
-  margin-bottom: 2.5rem;
+  background-color: rgba(53, 70, 73, 0.5);
+  border-radius: 10px;
 `;
 
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  align-self: flex-start;
+  align-self: center;
   height: 3rem;
   width: 6rem;
-  border-right: 1px solid grey;
-  margin-top: 0.35rem;
+  border-right: 1.5px solid #354649;
+  margin-bottom: 0.35rem;
 `;
 
 const RightBarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   height: auto;
   width: 100%;
 `;
@@ -33,17 +34,22 @@ const RightBarWrapper = styled.div`
 const Logo = styled.img`
   height: auto;
   width: 10rem;
-  margin-left: 0.75rem;
 `;
 
 const Input = styled.input`
   text-align: center;
-  margin-top: 1rem;
+  width: 30rem;
+  height: 4rem;
+  font-size: 2rem;
+  outline: none;
+  background-color: rgba(53, 70, 73);
+  border: none;
+  border-radius: 5px;
 `;
 
 const SocialWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
   width: 20rem;
 `;

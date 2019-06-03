@@ -9,9 +9,11 @@ const PostContainerWrapper = styled.div`
 const PostWrapper = styled.div`
   max-width: 64.1rem;
   width: 100%;
-  background-color: #fbfbfb;
-  border: 1px solid lightgray;
-  margin-top: 2.5rem;
+  background-color: #E0E7E9;
+  border: 1px solid #E0E7E9;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px 6px #354649;
+  margin: 10rem 0 0 0;
 `;
 
 const PostHeaderWrapper = styled.div`

@@ -24,7 +24,7 @@ const SearchBar = props => {
           <Input
             type="text"
             placeholder="Search"
-            value={props.search}
+            innerRef={props.search}
             onChange={props.filterPosts}
           />
         </div>
