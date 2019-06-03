@@ -1,14 +1,19 @@
 import React from 'react';
+import {
+  CommentIconWrapper,
+  LikeIt,
+  Icon
+} from '../Styles/CommentSectionStylePkg';
 
 const Likes = props => {
   return (
-    <div className="comment-icon-wrapper">
-      <div className="likes" onClick={props.addLike}>
-        <div className="icon far fa-heart fa-2x" />
-      </div>
-      <div className="icon far fa-comment fa-2x" />
+    <CommentIconWrapper>
+      <LikeIt onClick={props.addLike}>
+        <Icon className="far fa-heart fa-2x" />
+      </LikeIt>
+      <Icon className="icon far fa-comment fa-2x" />
       {props.likes} Likes
-    </div>
+    </CommentIconWrapper>
   );
 };
 export default Likes;

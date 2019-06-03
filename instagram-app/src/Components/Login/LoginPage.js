@@ -7,7 +7,6 @@ import {
   LoginInputContainer,
   LoginInputField
 } from '../Styles/LoginStylePkg';
-import './LoginPage.css';
 
 class Login extends React.Component {
   constructor(props) {

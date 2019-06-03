@@ -12,9 +12,9 @@ const Button = styled.button`
   width: 15rem;
 
   ${props =>
-    props.primary &&
+    props.logout &&
     css`
-      background: palevioletred;
+      background-color: #354649;
       color: white;
     `}
 `;

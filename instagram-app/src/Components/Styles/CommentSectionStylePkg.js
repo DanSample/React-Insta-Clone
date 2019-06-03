@@ -1,60 +1,82 @@
-.comment-text-wrapper {
+import styled, { css } from 'styled-components';
+
+// Found in CommentSection.js
+
+const CommentTextWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-}
+`;
 
-.comment-text-wrapper .comment-icon-wrapper {
+// Found in Likes.js
+
+const CommentIconWrapper = styled.div`
   display: flex;
   padding: 1rem 0 0 1rem;
-}
+`;
 
-.comment-text-wrapper .comment-icon-wrapper .icon {
-  height: 4rem;
-  width: 5rem;
-}
-
-.comment-text-wrapper .likes {
+const LikeIt = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: 0 0 1rem 2rem;
   font-weight: bold;
-}
+`;
 
-.comment-text-wrapper .comment-wrapper {
+const Icon = styled.div`
+  height: 4rem;
+  width: 5rem;
+`;
+
+// Found in Comment.js
+
+const CommentWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   line-height: 1.8rem;
   margin: 0.5rem 2rem;
-}
+`;
 
-.comment-text-wrapper .comment-wrapper .username {
+const UserName = styled.div`
   display: flex;
   align-items: flex-start;
   font-weight: bold;
-}
+`;
 
-.comment-text-wrapper .comment-wrapper .user-text {
+const UserText = styled.div`
   text-align: left;
   padding-left: 0.5rem;
   width: 80%;
-}
+`;
 
-.comment-text-wrapper .comment-input-wrapper {
+// Found in CommentInput.js
+
+const CommentInputWrapper = styled.form`
   display: flex;
   height: 5rem;
   width: 94%;
   border-top: 1px solid lightgray;
   margin: 2rem 0 0 2rem;
-}
+`;
 
-.comment-text-wrapper .comment-input-wrapper .comment-input {
+const CommentInputField = styled.input`
   height: 100%;
   width: 100%;
   font-size: 1.6rem;
   background-color: #fbfbfb;
   border: none;
   outline: none;
-}
+`;
+
+export {
+  CommentTextWrapper,
+  CommentIconWrapper,
+  LikeIt,
+  Icon,
+  CommentWrapper,
+  UserName,
+  UserText,
+  CommentInputWrapper,
+  CommentInputField
+};

@@ -1,16 +1,18 @@
 import React from 'react';
-
+import {
+  CommentInputWrapper,
+  CommentInputField
+} from '../Styles/CommentSectionStylePkg';
 const CommentInput = props => {
   return (
-    <form onSubmit={props.submitComment} className="comment-input-wrapper">
-      <input
-        className="comment-input"
+    <CommentInputWrapper onSubmit={props.submitComment}>
+      <CommentInputField
         type="text"
         value={props.comment}
         placeholder="Add a comment..."
         onChange={props.changeComment}
       />
-    </form>
+    </CommentInputWrapper>
   );
 };
 export default CommentInput;

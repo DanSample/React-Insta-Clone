@@ -1,27 +1,34 @@
 import React from 'react';
-import './SearchBar.css';
+import {
+  SearchBarWrapper,
+  ImageWrapper,
+  RightBarWrapper,
+  Logo,
+  Input,
+  SocialWrapper,
+  Button
+} from '../Styles/SearchBarStylePkg';
 
 const SearchBar = props => {
   return (
-    <div className="search-bar-wrapper">
-      <div className="image-wrapper">
+    <SearchBarWrapper>
+      <ImageWrapper>
         <div className="fab fa-instagram fa-2x" />
-      </div>
-      <div className="right-bar-wrapper">
-        <img
-          className="logo"
-          src="https://fontmeme.com/images/instagram-new-logo.png"
+      </ImageWrapper>
+      <RightBarWrapper>
+        <Logo
+          src={require('../../img/instagram_logo.png')}
           alt="instagram logo"
         />
         <div className="input-bar">
-          <input
+          <Input
             type="text"
             placeholder="Search"
             value={props.search}
             onChange={props.filterPosts}
           />
         </div>
-        <div className="social-wrapper">
+        <SocialWrapper>
           <div className="social">
             <i className="fa fa-compass fa-2x" />
           </div>
@@ -31,12 +38,12 @@ const SearchBar = props => {
           <div className="social">
             <i className="fa fa-user-circle fa-2x" />
           </div>
-        </div>
-        <button className="log-out" onClick={props.logOut}>
+        </SocialWrapper>
+        <Button logout onClick={props.logOut}>
           Log Out
-        </button>
-      </div>
-    </div>
+        </Button>
+      </RightBarWrapper>
+    </SearchBarWrapper>
   );
 };
 

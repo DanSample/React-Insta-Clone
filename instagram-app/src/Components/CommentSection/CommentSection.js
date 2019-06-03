@@ -2,8 +2,7 @@ import React from 'react';
 import CommentInput from './CommentInput';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
-
+import { CommentTextWrapper } from '../Styles/CommentSectionStylePkg';
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -54,7 +53,7 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className="comment-text-wrapper">
+      <CommentTextWrapper>
         {this.state.comments.map((c, i) => (
           <Comment key={i} comment={c} /> //maps over the comment on state and creates a new 'Comment' with a username and text.
         ))}
@@ -63,7 +62,7 @@ class CommentSection extends React.Component {
           submitComment={this.handleCommentSubmit} //passes handleCommentSubmit to be used onSubmit.
           changeComment={this.commentHandler} //passes handleCommentSubmit to be used onChange.
         />
-      </div>
+      </CommentTextWrapper>
     );
   }
 }
