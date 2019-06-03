@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const Button = styled.button`
   background: transparent;
   border-radius: 5px;
-  border: 2px solid #E0E7E9;
+  border: 2px solid #e0e7e9;
   color: black;
   font-family: 'Dancing Script', cursive;
   font-size: 2rem;

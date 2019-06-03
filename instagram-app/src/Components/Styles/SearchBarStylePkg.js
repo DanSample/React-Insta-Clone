@@ -33,7 +33,8 @@ const RightBarWrapper = styled.div`
 
 const Logo = styled.img`
   height: auto;
-  width: 10rem;
+  width: 12rem;
+  padding-left: 1rem;
 `;
 
 const Icon = styled.i`

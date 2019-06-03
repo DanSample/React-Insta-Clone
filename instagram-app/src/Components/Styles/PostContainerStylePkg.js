@@ -9,8 +9,8 @@ const PostContainerWrapper = styled.div`
 const PostWrapper = styled.div`
   max-width: 64.1rem;
   width: 100%;
-  background-color: #E0E7E9;
-  border: 1px solid #E0E7E9;
+  background-color: #e0e7e9;
+  border: 1px solid #e0e7e9;
   border-radius: 15px;
   box-shadow: 3px 3px 10px 6px #354649;
   margin: 10rem 0 0 0;

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 // Found in CommentSection.js
 
@@ -12,19 +12,23 @@ const CommentTextWrapper = styled.div`
 
 const CommentIconWrapper = styled.div`
   display: flex;
-  padding: 1rem 0 0 1rem;
+  align-items: center;
 `;
 
 const LikeIt = styled.div`
   display: flex;
   justify-content: flex-start;
-  padding: 0 0 1rem 2rem;
   font-weight: bold;
 `;
 
 const Icon = styled.div`
-  height: 4rem;
+  height: 5rem;
   width: 5rem;
+  padding: 1rem 0 0 2rem;
+`;
+
+const LikeNumber = styled.div`
+  padding-left: 1.5rem;
 `;
 
 // Found in Comment.js
@@ -64,7 +68,7 @@ const CommentInputField = styled.input`
   height: 100%;
   width: 100%;
   font-size: 1.6rem;
-  background-color: #E0E7E9;
+  background-color: #e0e7e9;
   border: none;
   outline: none;
 `;
@@ -73,6 +77,7 @@ export {
   CommentTextWrapper,
   CommentIconWrapper,
   LikeIt,
+  LikeNumber,
   Icon,
   CommentWrapper,
   UserName,

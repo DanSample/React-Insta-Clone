@@ -2,12 +2,7 @@ import React from 'react';
 import CommentInput from './CommentInput';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
-import {
-  CommentTextWrapper,
-  CommentIconWrapper,
-  Icon,
-  LikeIt,
-} from '../Styles/CommentSectionStylePkg'
+import { CommentTextWrapper } from '../Styles/CommentSectionStylePkg';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -20,7 +15,8 @@ class CommentSection extends React.Component {
 
   componentDidMount() {
     const id = this.props.postId; //returns the value of postId (imageUrl) and sets it to id.
-    if (localStorage.getItem(id)) { //if in local storage it finds id then...
+    if (localStorage.getItem(id)) {
+      //if in local storage it finds id then...
       this.setState({
         comments: JSON.parse(localStorage.getItem(this.props.postId)) //... take all postId in local storage and set it to state.
       });
