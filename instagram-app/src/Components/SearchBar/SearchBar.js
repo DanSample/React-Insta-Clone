@@ -4,6 +4,7 @@ import {
   ImageWrapper,
   RightBarWrapper,
   Logo,
+  Icon,
   Input,
   SocialWrapper,
   Button
@@ -20,7 +21,7 @@ const SearchBar = props => {
           src={require('../../img/instagram_logo.png')}
           alt="instagram logo"
         />
-        <div className="input-bar">
+        <div>
           <Input
             type="text"
             placeholder="Search"
@@ -30,13 +31,13 @@ const SearchBar = props => {
         </div>
         <SocialWrapper>
           <div className="social">
-            <i className="fa fa-compass fa-2x" />
+            <Icon className="far fa-compass fa-2x" />
           </div>
           <div className="social">
-            <i className="fa fa-heart fa-2x" />
+            <Icon className="far fa-heart fa-2x" />
           </div>
           <div className="social">
-            <i className="fa fa-user-circle fa-2x" />
+            <Icon className="far fa-user-circle fa-2x" />
           </div>
         </SocialWrapper>
         <Button logout onClick={props.logOut}>

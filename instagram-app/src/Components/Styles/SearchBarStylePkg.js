@@ -36,15 +36,27 @@ const Logo = styled.img`
   width: 10rem;
 `;
 
+const Icon = styled.i`
+  color: white;
+`;
+
 const Input = styled.input`
   text-align: center;
   width: 30rem;
   height: 4rem;
   font-size: 2rem;
+  color: #fff;
   outline: none;
-  background-color: rgba(53, 70, 73);
+  background-color: rgba(53, 70, 73, 0.5);
   border: none;
   border-radius: 5px;
+  margin-left: 30rem;
+
+  ::placeholder {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.25rem;
+    color: #fff;
+  }
 `;
 
 const SocialWrapper = styled.div`
@@ -59,6 +71,7 @@ export {
   ImageWrapper,
   RightBarWrapper,
   Logo,
+  Icon,
   Input,
   SocialWrapper,
   Button
